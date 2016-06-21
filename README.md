@@ -1,6 +1,11 @@
 Splash-Screen
 ==
 ####A Polymer splash-screen element to ease loading UX on any device.
+
+##Demo
+
+Refresh the page to try it out: [Demo](http://duttaoindril.github.io/splash-screen).
+
 ##Documentation
 
 ###Download the splash-screen.html file and import it in your `index.html`:
