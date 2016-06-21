@@ -7,9 +7,11 @@ A Polymer splash-screen element to ease loading UX on any device.
 
 `<link rel="import" href="bower_components/duttaoindril/splash-screen.html">`
 
-###Then put this right under your `<body>` tag:
+###Then put this as a child node to your `<body>` tag:
 
 `<splash-screen img-src="<RELATIVE IMAGE PATH>" back-color="<CSS COLOR>"></splash-screen>`
+
+###NOTE: If your `<body>` tag has an `unresolved` attribute, like so: `<body unresolved>`, please remove it -  otherwise the splashscreen may not show up properly. 
 
 ###There are also more properties that can be added to the tag:
 
