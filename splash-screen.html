@@ -1,0 +1,134 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../paper-spinner/paper-spinner.html">
+<link rel="import" href="../paper-ripple/paper-ripple.html">
+<link rel="import" href="../neon-animation/neon-animation-runner-behavior.html">
+<link rel="import" href="../neon-animation/animations/fade-out-animation.html">
+<dom-module id="splash-screen">
+    <template>
+        <style>
+            :host div {
+                width: 100%;
+                height: 100%;
+                position: fixed;
+                display: block;
+                text-align: center;
+            }
+            :host img {
+                width: auto;
+                height: auto;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                border-radius: 50%;
+            }
+            :host paper-spinner {
+                width: auto;
+                height: auto;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+            }
+            @media (min-device-width: 601px) and (orientation: portrait) {
+                :host paper-ripple {
+                    display: none;
+                }
+            }
+            @media (min-device-width: 961px) and (orientation: landscape) {
+                :host paper-ripple {
+                    display: none;
+                }
+            }
+        </style>
+        <div style="background-color: {{backColor}};">
+            <paper-ripple center id="ripple" style="display: {{rippleDisplay}};"></paper-ripple>
+            <img src={{imgSrc}} style="max-width: {{iconSize}}px; max-height: {{iconSize}}px;">
+            <paper-spinner active
+                style="max-width:{{spinnerSize}}px; max-height:{{spinnerSize}}px;">
+            </paper-spinner>
+        </div>
+    </template>
+    <script>
+        var rippleSim;
+        Polymer({
+            is: 'splash-screen',
+            behaviors: [
+                Polymer.NeonAnimationRunnerBehavior
+            ],
+            properties: {
+                imgSrc: String,
+                rippleDisplay: {
+                    type: String,
+                    value: "initial"
+                },
+                backColor: {
+                    type: String,
+                    value: "#fafafa"
+                },
+                fadeTime: {
+                    type: Number,
+                    value: 1000
+                },
+                rippleFreq: {
+                    type: Number,
+                    value: 250
+                },
+                animDelay: {
+                    type: Number,
+                    value: 1000
+                },
+                iconSize: {
+                    type: Number,
+                    value: 200
+                },
+                spinnerSub: {
+                    type: Number,
+                    value: 5
+                },
+                spinnerSize: {
+                    type: Number,
+                    computed: 'getSpinnerSize(iconSize, spinnerSub)'
+                },
+                animationConfig: {
+                    value: function() {
+                        return {
+                            name: 'fade-out-animation',
+                            node: this,
+                            timing: this.fadeTime
+                        }
+                    }
+                }
+            },
+            ready: function() {
+                if (this.rippleDisplay != "none")
+                    rippleSim = setInterval(function() {
+                        this.ripple.simulatedRipple();
+                    }, this.rippleFreq);
+            },
+            listeners: {
+                'neon-animation-finish': '_onNeonAnimationFinish'
+            },
+            animate: function() {
+                setTimeout(function() {
+                    document.querySelector('splash-screen').playAnimation();
+                }, this.animDelay);
+            },
+            _onNeonAnimationFinish: function() {
+                // this.style.display = 'none';
+                this.remove();
+            },
+            getSpinnerSize: function(iSize, subSize) {
+                return iSize - subSize;
+            }
+        });
+        document.addEventListener('WebComponentsReady', function() {
+            document.querySelector('splash-screen').animate();
+            clearInterval(rippleSim);
+        });
+    </script>
+</dom-module>
