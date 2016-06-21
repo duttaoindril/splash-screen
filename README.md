@@ -1,6 +1,6 @@
 Splash-Screen
 ==
-A Polymer splash-screen element to ease loading UX on any device.
+####A Polymer splash-screen element to ease loading UX on any device.
 ##Documentation
 
 ###Download the splash-screen.html file and import it in your `index.html`:
@@ -11,9 +11,9 @@ A Polymer splash-screen element to ease loading UX on any device.
 
 `<splash-screen img-src="<RELATIVE IMAGE PATH>" back-color="<CSS COLOR>"></splash-screen>`
 
-###NOTE: If your `<body>` tag has an `unresolved` attribute, like so: `<body unresolved>`, please remove it -  otherwise the splashscreen may not show up properly. 
+#####NOTE: If your `<body>` tag has an `unresolved` attribute, like so: `<body unresolved>`, please remove it -  otherwise the splashscreen may not show up properly.
 
-###There are also more properties that can be added to the tag:
+###There are also more properties that can be added to the `<splash-screen>` tag:
 
 ####The following convention is followed:
 
