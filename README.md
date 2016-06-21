@@ -1,12 +1,9 @@
 Splash-Screen
 ==
 A Polymer splash-screen element to ease loading UX on any device.
---
----
 ##Documentation
----
-###This is the splash-screen element documentation:
-
+This is the splash-screen element documentation:
+--
 ###Simply import from relative path:
 
 `<link rel="import" href="bower_components/myelems/splash-screen.html">`
