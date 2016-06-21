@@ -3,7 +3,7 @@ Splash-Screen
 A Polymer splash-screen element to ease loading UX on any device.
 ##Documentation
 
-###Download the splash-screen.html file and import it from relative path in your `index.html`:
+###Download the splash-screen.html file and import it in your `index.html`:
 
 `<link rel="import" href="bower_components/duttaoindril/splash-screen.html">`
 
