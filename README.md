@@ -2,11 +2,10 @@ Splash-Screen
 ==
 A Polymer splash-screen element to ease loading UX on any device.
 ##Documentation
-This is the splash-screen element documentation:
---
-###Simply import from relative path:
 
-`<link rel="import" href="bower_components/myelems/splash-screen.html">`
+###Download the splash-screen.html file and import it from relative path in your `index.html`:
+
+`<link rel="import" href="bower_components/duttaoindril/splash-screen.html">`
 
 ###Then put this right under your `<body>` tag:
 
@@ -32,14 +31,13 @@ This is the splash-screen element documentation:
 
 `spinner-sub=5` - Pixels of distance inward the spinner will be from the logo,  can be made negative to have spinner outside the logo.
 
----
 ## Setting up Dependencies
----
+
 ###EITHER:
 [Download](https://github.com/PolymerElements/polymer-starter-kit/releases/download/v1.3.0/polymer-starter-kit-1.3.0.zip) the [Polymer Starter Kit](https://github.com/PolymerElements/polymer-starter-kit) and follow it's intstructions to set up a starter Polymer Website, and follow the instructions above to try the element out in the polymer starter kit.
 
 ###OR:
-Create a Polymer website that has the following dependencies in it's `bower_components` dependencies. Acquire these from the [Google Element Catalog](https://elements.polymer-project.org/).
+Create a Polymer website that has the following dependencies in the `bower_components` folder of dependencies. Acquire these from the [Google Element Catalog](https://elements.polymer-project.org/).
 
 `"bower_components/polymer/polymer.html"`
 
