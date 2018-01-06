@@ -1,30 +1,30 @@
 Splash-Screen
 ==
-####A Polymer splash-screen element to ease loading UX on any device.
+#### A Polymer splash-screen element to ease loading UX on any device.
 
-##Demo
+## Demo
 
 Refresh the page to try it out: [Demo](http://duttaoindril.github.io/splash-screen).
 
-##Documentation
+## Documentation
 
-###Download the splash-screen.html file and import it in your `index.html`:
+### Download the splash-screen.html file and import it in your `index.html`:
 
 `<link rel="import" href="bower_components/duttaoindril/splash-screen.html">`
 
-###Then put this as a child node to your `<body>` tag:
+### Then put this as a child node to your `<body>` tag:
 
 `<splash-screen img-src="<RELATIVE IMAGE PATH>" back-color="<CSS COLOR>"></splash-screen>`
 
-#####NOTE: If your `<body>` tag has an `unresolved` attribute, like so: `<body unresolved>`, please remove it -  otherwise the splashscreen may not show up properly.
+##### NOTE: If your `<body>` tag has an `unresolved` attribute, like so: `<body unresolved>`, please remove it -  otherwise the splashscreen may not show up properly.
 
-###There are also more properties that can be added to the `<splash-screen>` tag:
+### There are also more properties that can be added to the `<splash-screen>` tag:
 
-####The following convention is followed:
+#### The following convention is followed:
 
 `Name=defaultValue` - Description
 
-####Properties:
+#### Properties:
 
 `rippleDisplay="initial"` - Can be set to "none" for no ripples at any time; ripples are always cancelled on a desktop browser.
 
@@ -56,7 +56,7 @@ Create a Polymer website that has the following dependencies in the `bower_compo
 
 `"bower_components/neon-animation/animations/fade-out-animation.html"`
 
-####Then...
+#### Then...
 
 1.  Download and install Node from [https://nodejs.org/](https://nodejs.org/). Node includes the node package manager command, `npm`.
 
